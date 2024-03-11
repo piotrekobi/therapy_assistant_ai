@@ -1,0 +1,11 @@
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.stats-container div {
+    margin: 10px 0;
+    font-size: 18px;
+}

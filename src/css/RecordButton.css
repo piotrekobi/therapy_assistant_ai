@@ -1,0 +1,22 @@
+.record-button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.record-button.start {
+    background-color: green;
+}
+
+.record-button.stop {
+    background-color: red;
+}
+
+.timer {
+    margin-top: 10px;
+    color: black;
+}

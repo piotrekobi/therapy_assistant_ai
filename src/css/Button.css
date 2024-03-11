@@ -1,0 +1,48 @@
+/* src/css/Button.css */
+
+@media (min-width: 1000px) {
+    .button-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .widget-row {
+        display: flex;
+        align-items: center;
+        border: 1px solid #007bff;
+        margin: 5px 0;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+}
+
+
+.button-container button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    height: auto;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+.button-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 999px) {
+    .button-container button {
+        margin: 0px 5px;
+
+    }
+}

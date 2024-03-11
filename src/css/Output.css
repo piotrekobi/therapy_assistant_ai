@@ -1,0 +1,32 @@
+/* src/css/Output.css */
+
+
+.output-container {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.output-container pre {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    text-align: left;
+    display: inline-block;
+    max-width: 90%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 20px;
+}
+
+@media (max-width: 999px) {
+    .output-container {
+        margin-top: 10px;
+    }
+
+    .output-container pre {
+        font-size: 16px;
+    }
+}

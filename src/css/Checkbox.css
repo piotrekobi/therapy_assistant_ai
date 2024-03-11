@@ -1,0 +1,35 @@
+/* src/css/Checkbox.css */
+
+
+
+.checkbox-container {
+    margin: 2px auto 0;
+    /* Center the checkbox container */
+}
+
+label[for="startsWithCheckbox"],
+label[for="endsWithCheckbox"] {
+    margin-right: 5px;
+}
+
+#startsWithCheckbox {
+    margin-right: 5px;
+}
+
+@media (min-width: 1000px) {
+
+
+
+
+    .checkbox-container {
+        display: inline;
+        /* Ensure the container is displayed as a block element */
+    }
+}
+
+@media (max-width: 999px) {
+    .checkbox-container {
+        display: block;
+        /* Ensure the container is displayed as a block element */
+    }
+}

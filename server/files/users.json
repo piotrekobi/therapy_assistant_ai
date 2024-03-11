@@ -1,0 +1,12 @@
+{
+    "test": {
+        "password_hash": "pbkdf2:sha256:260000$IRkesrt4rH2fuAWt$f5492815f7253a586d271b66088c93a1a3535a943ea01ad6740fba236bd04b0d",
+        "stats": {
+            "vowels": 5,
+            "words": 3,
+            "sentences": 3,
+            "recordings": 1,
+            "days": 0
+        }
+    }
+}

@@ -1,0 +1,29 @@
+/* src/css/WidgetContainer.css */
+
+
+@media (min-width: 1000px) {
+    .slider-container {
+        margin-left: 10px;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        /* Vertically center the label and slider */
+    }
+}
+
+@media (max-width: 999px) {
+    .widget-container {
+        text-align: center;
+        margin: 5px auto;
+        /* Center the input element */
+        padding: 5px;
+        padding-top: 1px;
+        display: inline-block;
+    }
+
+    #sliderLabel {
+        margin-top: 5px;
+        display: inline-block;
+    }
+
+}

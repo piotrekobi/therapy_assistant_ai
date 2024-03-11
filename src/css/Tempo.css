@@ -1,0 +1,13 @@
+/* src/css/Tempo.css */
+
+@media (min-width: 1000px) {
+    .tempo-container {
+        margin-right: 5px;
+    }
+
+    #tempo {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+}

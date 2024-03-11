@@ -1,0 +1,15 @@
+/* public/css/style.css */
+
+/* Reset some default browser styles */
+html, body, h1, button, label, pre, select, input, checkbox {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element dimensions */
+}
+
+/* Set a background color and font for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Light gray background */
+    text-align: center;
+}

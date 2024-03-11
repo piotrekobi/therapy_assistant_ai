@@ -1,0 +1,15 @@
+/* src/css/NotificationLabel.css */
+
+
+.notification {
+    color: #28a745;
+    font-weight: bold;
+    display: block;
+}
+
+@media (min-width: 1000px) {
+    .notification {
+        margin: 10px 0;
+    }
+
+}

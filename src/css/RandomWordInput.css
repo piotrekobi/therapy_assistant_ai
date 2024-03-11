@@ -1,0 +1,17 @@
+/* src/css/RandomWordInput.css */
+
+
+#randomWordInput {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+@media (max-width: 999px) {
+    #randomWordInput {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
