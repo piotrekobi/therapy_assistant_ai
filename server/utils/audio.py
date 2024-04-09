@@ -1,5 +1,3 @@
-# server/detect_speedup.py
-
 from pydub import AudioSegment, silence
 from scipy.signal import find_peaks
 import numpy as np

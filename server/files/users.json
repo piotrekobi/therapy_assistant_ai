@@ -2,10 +2,26 @@
     "test": {
         "password_hash": "pbkdf2:sha256:260000$IRkesrt4rH2fuAWt$f5492815f7253a586d271b66088c93a1a3535a943ea01ad6740fba236bd04b0d",
         "stats": {
-            "vowels": 5,
-            "words": 3,
-            "sentences": 3,
-            "recordings": 1,
+            "vowels": 11,
+            "words": 24,
+            "sentences": 10,
+            "recordings": 3,
+            "days": 0
+        },
+        "settings": {
+            "wordLength": "5",
+            "defaultSentenceLength": "30-40",
+            "defaultLanguage": "en",
+            "assistantKnowledge": "Wiek pacjenta: 23 lata"
+        }
+    },
+    "test1": {
+        "password_hash": "pbkdf2:sha256:260000$YUCwgJDH4XJoXopy$359948ced87c54da1bc8786ad60ecee4b4d5259c0e40afdb2cbadf30ec3168ae",
+        "stats": {
+            "vowels": 0,
+            "words": 0,
+            "sentences": 0,
+            "recordings": 0,
             "days": 0
         }
     }
