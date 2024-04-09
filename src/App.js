@@ -5,10 +5,11 @@ import { BrowserRouter as Router, Route, Routes, Navigate, Link } from 'react-ro
 import { AppContext } from './AppContext';
 import GeneratorPage from './GeneratorPage';
 import ChatPage from './ChatPage';
-import IntonationTraining from './IntonationTraining'; // Ensure you've created this
-import Statistics from './Statistics'; // Ensure you've created this
-import Personalization from './Personalization'; // Ensure you've created this
-import Community from './Community'; // Ensure you've created this
+import IntonationTraining from './IntonationTraining';
+import Statistics from './Statistics';
+import Personalization from './Personalization';
+import Community from './Community';
+import PostDetail from './components/PostDetail';
 import Login from './components/Login';
 import Register from './components/Register';
 
@@ -25,7 +26,7 @@ export const App = () => {
                     </div>
                 ) : (
                     <nav>
-                        <Link to="/login">Login</Link> |
+                        <Link to="/login">Login</Link> |{" "}
                         <Link to="/register">Register</Link>
                     </nav>
                 )}
@@ -39,6 +40,7 @@ export const App = () => {
                 <Route path="/statistics" element={user ? <Statistics /> : <Navigate replace to="/login" />} />
                 <Route path="/personalization" element={user ? <Personalization /> : <Navigate replace to="/login" />} />
                 <Route path="/community" element={user ? <Community /> : <Navigate replace to="/login" />} />
+                <Route path="/posts/:postId" element={user ? <PostDetail /> : <Navigate replace to="/login" />} />
                 <Route path="/" element={<Navigate replace to={user ? "/generator" : "/login"} />} />
             </Routes>
         </Router>
