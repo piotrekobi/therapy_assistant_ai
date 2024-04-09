@@ -47,7 +47,7 @@ const RecordButton = ({ onRecord }) => {
 
     return (
         <button onClick={handleRecordClick}>
-            {isRecording ? 'Stop Recording' : 'Start Recording'}
+            {isRecording ? 'Zatrzymaj nagrywanie' : 'Nagraj wiadomość'}
         </button>
     );
 };
