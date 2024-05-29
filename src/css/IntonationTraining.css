@@ -1,0 +1,37 @@
+/* src/css/IntonationTraining.css */
+
+.intonation-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.intonation-container h2,
+.intonation-container p {
+    margin: 10px 0;
+}
+
+.intonation-container .record-section {
+    margin: 20px 0;
+}
+
+.fetch-word {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.fetch-word:hover {
+    background-color: #0056b3;
+}
+
+.feedback-message {
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 10px;
+}

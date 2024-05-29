@@ -1,22 +1,29 @@
+/* src/css/RecordButton.css */
+
 .record-button {
-    padding: 10px 20px;
     color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
-.record-button.start {
-    background-color: green;
+
+.start-recording {
+    background-color: rgb(13, 196, 13); /* Green background for "Nagraj wiadomość" */
 }
 
-.record-button.stop {
-    background-color: red;
+.start-recording:hover {
+    background-color: rgb(31, 172, 31); /* Darker green on hover */
 }
 
-.timer {
-    margin-top: 10px;
-    color: black;
+/* Styles for when recording is active */
+.stop-recording {
+    background-color: red; /* Red background for "Zatrzymaj nagrywanie" */
+}
+
+.stop-recording:hover {
+    background-color: rgb(217, 22, 22); /* Darker red on hover */
 }

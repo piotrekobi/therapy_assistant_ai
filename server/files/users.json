@@ -1,11 +1,12 @@
 {
     "test": {
         "password_hash": "pbkdf2:sha256:260000$IRkesrt4rH2fuAWt$f5492815f7253a586d271b66088c93a1a3535a943ea01ad6740fba236bd04b0d",
+        "last_login_date": "2024-05-09",
         "stats": {
-            "vowels": 11,
-            "words": 24,
-            "sentences": 10,
-            "recordings": 3,
+            "vowels": 14,
+            "words": 58,
+            "sentences": 47,
+            "recordings": 14,
             "days": 0
         },
         "settings": {
@@ -17,6 +18,18 @@
     },
     "test1": {
         "password_hash": "pbkdf2:sha256:260000$YUCwgJDH4XJoXopy$359948ced87c54da1bc8786ad60ecee4b4d5259c0e40afdb2cbadf30ec3168ae",
+        "last_login_date": "2024-05-07",
+        "stats": {
+            "vowels": 0,
+            "words": 0,
+            "sentences": 0,
+            "recordings": 0,
+            "days": 0
+        }
+    },
+    "test2": {
+        "password_hash": "pbkdf2:sha256:260000$Rk0u5usNtHilVXsC$11cb260766488cd680edbb09eecca3b17f5a3ecbcbeb4f90df2fa4640e40ce82",
+        "last_login_date": "2024-05-05",
         "stats": {
             "vowels": 0,
             "words": 0,

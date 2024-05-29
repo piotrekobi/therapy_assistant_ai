@@ -1,3 +1,5 @@
+// src/ChatPage.js
+
 import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import { AppContext } from './AppContext';
@@ -50,26 +52,26 @@ export const ChatPage = () => {
         localStorage.removeItem('chatMessages');
     };
 
-        // Adjust handleAudioUpload to only set transcription for editing
-        const handleAudioUpload = async (audioBlob) => {
-            if (!audioBlob) return;
-            setIsProcessing(true);
-            const formData = new FormData();
-            formData.append('audio', audioBlob);
-            formData.append('username', user.username); // Append username here
-    
-            try {
-                const response = await axios.post('http://127.0.0.1:5000/transcribe_audio', formData, {
-                    headers: { 'Content-Type': 'multipart/form-data' },
-                });
-                setCurrentMessage(response.data.transcribed_text); // Set transcribed text for editing, instead of sending it directly
-            } catch (error) {
-                console.error('Error uploading audio:', error);
-                alert('Error uploading audio: ' + error.message);
-            } finally {
-                setIsProcessing(false);
-            }
-        };
+    // Adjust handleAudioUpload to only set transcription for editing
+    const handleAudioUpload = async (audioBlob) => {
+        if (!audioBlob) return;
+        setIsProcessing(true);
+        const formData = new FormData();
+        formData.append('audio', audioBlob);
+        formData.append('username', user.username); // Append username here
+
+        try {
+            const response = await axios.post('http://127.0.0.1:5000/transcribe_audio', formData, {
+                headers: { 'Content-Type': 'multipart/form-data' },
+            });
+            setCurrentMessage(response.data.transcribed_text); // Set transcribed text for editing, instead of sending it directly
+        } catch (error) {
+            console.error('Error uploading audio:', error);
+            alert('Error uploading audio: ' + error.message);
+        } finally {
+            setIsProcessing(false);
+        }
+    };
 
     return (
         <div>
@@ -81,7 +83,9 @@ export const ChatPage = () => {
                 onMessageSubmit={handleTextSubmit}
             />
             <RecordButton onRecord={handleAudioUpload} isProcessing={isProcessing} />
-            <button onClick={resetConversation} style={{ marginTop: '10px' }}>Restart Conversation</button>
+            <button onClick={resetConversation} className="reset-conversation-button">
+                Zrestartuj rozmowę
+            </button>
         </div>
     );
 };

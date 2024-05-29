@@ -1,14 +1,39 @@
 /* src/css/Header.css */
 
-header {
+.header-container {
+    position: relative; /* This sets a new positioning context for absolute children */
     background-color: #333;
     color: #fff;
-    padding-top: 20px;
+    padding: 20px 0; /* Increase padding on top and bottom for a wider header */
 }
 
 h1 {
-    padding: 20px;
-    margin: 0;
     text-align: center;
+    margin: 0 auto; /* Center horizontally */
+    padding: 0; /* Adjust padding as needed */
+    position: relative; /* Switch back to relative positioning */
+    transform: none; /* Remove transform when using relative positioning */
 }
 
+.user-info {
+    position: absolute; /* Absolutely position the user info */
+    top: 20px; /* Aligns the info from the top of the header container */
+    left: 20px; /* Aligns the info from the left of the header container */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-info .logout-button {
+    margin-top: 5px;
+    background-color: gray;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.user-info .logout-button:hover {
+    background-color: darkgray;
+}

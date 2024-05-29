@@ -1,4 +1,5 @@
 // src/components/ChatWidget.js
+
 import React from 'react';
 import '../css/ChatWidget.css';
 
@@ -10,7 +11,7 @@ const ChatWidget = ({ messages, isProcessing }) => {
                     {message.text}
                 </div>
             ))}
-            {isProcessing && <div className="processing-spinner">Processing...</div>}
+            {isProcessing && <div class="loader"></div>}
         </div>
     );
 };

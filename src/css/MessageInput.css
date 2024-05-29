@@ -1,0 +1,53 @@
+/* src/css/MessageInput.css */
+
+.message-input-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  .message-input-form {
+    width: 30%;
+    max-width: 500px; /* Maximum width of the form */
+    display: flex;
+    gap: 10px; /* Spacing between elements */
+    align-items: center;
+  }
+  
+  .message-input-form input[type="text"] {
+    flex-grow: 1; /* Allows the input to grow and fill the form width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .message-input-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .message-input-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* If the ChatWidget is to the left, this ensures MessageInput aligns with it */
+  @media (min-width: 1000px) {
+    .message-input-form {
+      width: calc(30% - 20px); /* Adjust based on ChatWidget's padding */
+    }
+  }
+  
+  /* For smaller screens, adjust to use more of the available width */
+  @media (max-width: 999px) {
+    .message-input-form {
+      width: calc(90% - 20px); /* Use more space */
+    }
+  }
+  

@@ -1,0 +1,55 @@
+/* src/css/Personalization.css */
+
+.personalization-settings {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.personalization-settings h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.personalization-settings label {
+    font-weight: bold;
+    margin: 10px 0;
+    display: block;
+}
+
+.personalization-settings input[type="number"],
+.personalization-settings select,
+.personalization-settings textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.personalization-settings button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.personalization-settings button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .personalization-settings {
+        width: 90%;
+        padding: 10px;
+    }
+}

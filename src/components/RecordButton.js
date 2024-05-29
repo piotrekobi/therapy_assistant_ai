@@ -1,5 +1,6 @@
 // src/components/RecordButton.js
 import React, { useState } from 'react';
+import '../css/RecordButton.css';
 
 const RecordButton = ({ onRecord }) => {
     const [isRecording, setIsRecording] = useState(false);
@@ -46,7 +47,10 @@ const RecordButton = ({ onRecord }) => {
     };
 
     return (
-        <button onClick={handleRecordClick}>
+        <button 
+            className={`record-button ${isRecording ? 'stop-recording' : 'start-recording'}`}
+            onClick={handleRecordClick}
+        >
             {isRecording ? 'Zatrzymaj nagrywanie' : 'Nagraj wiadomość'}
         </button>
     );

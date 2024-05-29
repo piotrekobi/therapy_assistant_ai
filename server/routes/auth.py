@@ -8,6 +8,7 @@ from flask_login import (
 from werkzeug.security import generate_password_hash, check_password_hash
 from utils.auth import get_users, save_users
 from utils.login_manager import login_manager
+from datetime import datetime
 
 
 auth_bp = Blueprint('auth', __name__)
@@ -34,6 +35,7 @@ def login():
             username, users[username]["password_hash"], users[username].get("stats", {})
         )
         login_user(user_obj)
+        
         return jsonify({"message": "Logged in successfully"}), 200
     return jsonify({"message": "Invalid username or password"}), 401
 
@@ -67,5 +69,12 @@ def load_user(username):
     users = get_users()
     if username in users:
         user_info = users[username]
+        today = datetime.now().date().isoformat()
+        last_login_date = users[username].get("last_login_date", "")
+        
+        if last_login_date != today:
+            users[username]["last_login_date"] = today
+            users[username]["stats"]["days"] += 1
+            save_users(users)
         return User(username, user_info["password_hash"], user_info.get("stats", {}))
     return None

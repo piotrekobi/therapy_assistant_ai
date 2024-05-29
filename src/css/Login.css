@@ -1,0 +1,75 @@
+/* src/css/Login.css */
+
+.login-container {
+    display: block; /* Remove flex to stack elements */
+    height: 100vh;
+    background-color: #f2f2f2;
+    text-align: center; /* Center the title */
+}
+
+
+.login-form {
+    display: inline-block; /* Allows for vertical stacking */
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin-top: 20px
+}
+
+.login-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-form button {
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 999px) {
+    .login-form {
+        width: calc(90% - 20px); /* Adjust width for smaller screens */
+        margin: 0 5%;
+    }
+}
+
+
+.auth-buttons button {
+    margin-top: 10px; /* This adds space above the Register button */
+    display: block; /* This will make each button take the full width */
+}
+
+
+.auth-buttons button.register-button {
+    background-color: #FFA500; 
+    color: #fff; 
+  }
+  
+  .auth-buttons button.register-button:hover {
+    background-color: #cc8400;
+  }
+  

@@ -1,8 +1,9 @@
 # server/intonation_routes.py
 
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, request
 import random
 from utils.generation import word_with_intonation
+from utils.intonation import classify_emotion, detect_emotion_parameters
 
 intonation_bp = Blueprint('intonation', __name__)
 
@@ -12,6 +13,9 @@ def get_intonation_word():
 
 @intonation_bp.route("/evaluate_intonation", methods=["POST"])
 def evaluate_intonation():
-    feedback_options = ["Dobrze", "Poprawnie", "Niepoprawnie"]
-    feedback = random.choice(feedback_options)
-    return jsonify({"feedback": feedback})
+    audio_file = request.files["audio"]
+    audio_file.save("uploads/intonation.webm")
+    params = detect_emotion_parameters("uploads/intonation.webm")
+    emotion, distances = classify_emotion(params[2]["score"], params[1]["score"], params[0]["score"])
+    print(params, emotion, distances)
+    return jsonify({"emotion": emotion, "distances": distances})

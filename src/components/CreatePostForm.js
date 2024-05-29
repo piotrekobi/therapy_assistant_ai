@@ -1,5 +1,7 @@
+// src/components/CreatePostForm.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../css/CreatePostForm.css';  // Ensure the CSS file is correctly imported
 
 export const CreatePostForm = ({ fetchPosts }) => {
     const [title, setTitle] = useState('');
@@ -14,7 +16,7 @@ export const CreatePostForm = ({ fetchPosts }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="create-post-form"> {/* Apply the CSS class here */}
             <input
                 type="text"
                 value={title}

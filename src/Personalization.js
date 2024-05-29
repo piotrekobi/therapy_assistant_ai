@@ -1,7 +1,11 @@
+// src/Personalization.js
+
 import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import Header from './components/Header';
 import { AppContext } from './AppContext';
+import './css/Personalization.css';
+
 
 export const Personalization = () => {
     const { user, setLanguage } = useContext(AppContext);
