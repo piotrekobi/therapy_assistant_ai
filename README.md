@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# Speech Therapy Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed as part of a master's thesis focused on creating a comprehensive web application to assist in stuttering therapy. The application combines modern web technologies with speech processing capabilities to provide an interactive platform for speech therapy exercises and practice.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+The Speech Therapy Assistant is a full-stack web application that offers various tools and features to support stuttering therapy:
 
-### `npm start`
+### Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Exercise Generator**
+  - Vowel practice exercises
+  - Word generation with different complexity levels
+  - Sentence generation with adjustable tempo and length
+  - Support for both Polish and English languages
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Interactive Chat Assistant**
+  - AI-powered conversational support
+  - Voice message capabilities
+  - Context-aware responses based on user history
+  - Personalized therapy suggestions
 
-### `npm test`
+- **Intonation Training**
+  - Real-time voice analysis
+  - Emotion detection in speech
+  - Feedback on speech patterns
+  - Practice exercises with different emotional contexts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Progress Tracking**
+  - User statistics monitoring
+  - Practice session history
+  - Performance metrics
+  - Progress visualization
 
-### `npm run build`
+- **Community Features**
+  - User forum
+  - Post and comment system
+  - Experience sharing
+  - Community support
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technical Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Framework:** Flask (Python)
+- **Speech Processing:**
+  - Google Cloud Speech-to-Text
+  - PyDub for audio processing
+  - NLTK for language processing
+- **AI Integration:** OpenAI GPT for chat assistance
+- **Authentication:** Flask-Login
+- **Database:** JSON file-based storage
 
-### `npm run eject`
+### Frontend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Framework:** React
+- **State Management:** React Context API
+- **Styling:** CSS with responsive design
+- **Audio Processing:** Web Audio API
+- **Routing:** React Router
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Setup Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone the Repository**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   git clone [repository-url]
+   cd speech-therapy-assistant
+   ```
 
-## Learn More
+2. **Backend Setup**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   # Create and activate virtual environment
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   
+   # Install dependencies
+   pip install -r requirements.txt
+   
+   # Set up environment variables
+   cp .env.example .env
+   # Edit .env with your API keys and configurations
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Frontend Setup**
 
-### Code Splitting
+   ```bash
+   # Install dependencies
+   cd frontend
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Required API Keys**
+   - OpenAI API key for the chat assistant
+   - Google Cloud Speech-to-Text API credentials
+   - Hugging Face API token for emotion detection
 
-### Analyzing the Bundle Size
+5. **Running the Application**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   # Start backend server
+   python app.py
+   
+   # In a separate terminal, start frontend
+   cd frontend
+   npm start
+   ```
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is part of a master's thesis research and is protected under appropriate academic guidelines. Please contact the author for usage permissions.
 
-### Advanced Configuration
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Piotr Paturej
+Master's Thesis Project
+Warsaw University of Technology
+2023
